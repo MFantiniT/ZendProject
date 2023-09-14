@@ -10,12 +10,13 @@ class CustomerController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+
     }
 
     public function createAction()
     {
-        // action body
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/forms/customer.ini', 'form');
+        $this->view->form = new Zend_Form($config);
     }
 
     public function editAction()
